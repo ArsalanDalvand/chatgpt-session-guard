@@ -17,3 +17,6 @@ dependencies = [
 
 [project.scripts]
 chatgpt-session-guard = "chatgpt_guard.__main__:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["chatgpt_guard"]
