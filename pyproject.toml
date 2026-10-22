@@ -1,0 +1,19 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "chatgpt-session-guard"
+version = "1.0.0"
+description = "Automated, browserless session monitoring and unauthorized device eviction for ChatGPT"
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [
+    { name = "Arsalan Dalvand" }
+]
+dependencies = [
+    "curl-cffi>=0.7.0",
+]
+
+[project.scripts]
+chatgpt-session-guard = "chatgpt_guard.__main__:main"

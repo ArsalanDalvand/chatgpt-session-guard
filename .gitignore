@@ -1,0 +1,20 @@
+# Environment and sensitive local data
+allowed_sessions.json
+config.json
+.env
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.ruff_cache/
+build/
+dist/
+*.egg-info/
+
+# Local databases & temp
+*.sqlite
+/tmp/
+.venv/

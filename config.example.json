@@ -1,0 +1,12 @@
+{
+  "access_token": "",
+  "cookie_string": "",
+  "firefox_profile_path": "",
+  "interval": 15,
+  "allowed_file": "allowed_sessions.json",
+  "allowed_identifiers": [
+    "SM-A715F",
+    "Computer"
+  ],
+  "keep_oldest_codex": false
+}
