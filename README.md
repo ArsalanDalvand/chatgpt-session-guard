@@ -19,6 +19,35 @@ No Selenium, no Puppeteer, and no GUI browser required. Uses TLS fingerprint imp
 
 ---
 
+## Authentication Setup
+
+To run on a server, get your token using either method below:
+
+### Method 1: Get `CHATGPT_ACCESS_TOKEN` (Fastest)
+1. Open [chatgpt.com](https://chatgpt.com) in browser and log in.
+2. Open a new tab and go to: `https://chatgpt.com/api/auth/session`
+3. Copy the string inside `"accessToken": "..."`.
+4. Run:
+   ```bash
+   export CHATGPT_ACCESS_TOKEN="ey..."
+   ```
+
+*Or run this in browser DevTools Console (F12) to copy directly to clipboard:*
+```javascript
+fetch('/api/auth/session').then(r=>r.json()).then(d=>copy(d.accessToken))
+```
+
+### Method 2: Get `CHATGPT_COOKIE`
+1. Open [chatgpt.com](https://chatgpt.com) and press `F12`.
+2. Go to **Storage** (Firefox) or **Application** (Chrome) -> **Cookies** -> `https://chatgpt.com`.
+3. Copy the value of `__Secure-next-auth.session-token`.
+4. Run:
+   ```bash
+   export CHATGPT_COOKIE="__Secure-next-auth.session-token=your_cookie_value"
+   ```
+
+---
+
 ## Installation
 
 ```bash
